@@ -1,5 +1,5 @@
 **Portfolio**
-Chetan Bhoyar Portfolio -
+Chetan Bhoyar -
 
 Live Preview - [Click Here](https://chetan-bhoyar-portfolio.netlify.app/)
 
