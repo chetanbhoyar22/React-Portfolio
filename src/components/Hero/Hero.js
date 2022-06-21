@@ -37,10 +37,6 @@ function Hero() {
         <ScrollDown to="projects">
           <ScrollLink>
             Scroll down
-            <img
-              src="https://svgshare.com/i/ftt.svg"
-              alt="scroll-down"
-            />
           </ScrollLink>
         </ScrollDown>
       </HeroContainer>
