@@ -1,16 +1,23 @@
 import React from "react";
 import Hero from "../components/Hero/Hero";
-import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
+import Experience from "../components/Experience/Experience";
+import Skills from "../components/Skills/Skills";
+import Projects from "../components/Projects/Projects";
+import Education from "../components/Education/Education";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import FixSocialIcon from "../components/SocialIcon/FixSocialIcon";
+
 function Home() {
   return (
     <>
       <Hero />
-      <Projects />
       <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education />
       <Contact />
       <Footer />
       <FixSocialIcon />

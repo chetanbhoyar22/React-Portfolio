@@ -1,76 +1,48 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
-
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
+import { colors } from "../../styles/theme";
+import { personalInfo } from "../../data/portfolioData";
 
 export const SocialDiv = styled.div`
   margin-top: 2rem;
-  display: none;
+
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    gap: 1.5rem;
   }
 
   a {
-    font-size: 2.5rem;
-    color: #151418;
-    transition: 0.2s ease-in;
+    font-size: 1.8rem;
+    color: ${colors.textMuted};
+    transition: color 0.3s, transform 0.3s;
     &:hover {
-      color: rgb(57, 134, 250);
+      color: ${colors.accentLight};
+      transform: translateY(-3px);
     }
-  }
-
-  .item + .item {
-    margin-left: 2rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    display: block;
   }
 `;
 
 function SocialIcon() {
+  const links = [
+    { icon: FaLinkedin, url: personalInfo.social.linkedin, label: "LinkedIn" },
+    { icon: FaGithub, url: personalInfo.social.github, label: "GitHub" },
+    { icon: FaTwitter, url: personalInfo.social.twitter, label: "Twitter" },
+  ];
+
   return (
     <SocialDiv>
       <ul>
-        <li className="item">
-          <a
-            href="https://www.linkedin.com/in/chetan-bhoyar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-        </li>
-        <li className="item">
-          <a
-            href="https://github.com/chetanbhoyar22"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-        </li>
-        <li className="item">
-          <a
-            href="https://twitter.com/chetanbhoyar22"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-        </li>
-        <li className="item">
-          <a
-            href="https://www.instagram.com/chetan_22_08/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-        </li>
+        {links.map(({ icon: Icon, url, label }) => (
+          <li key={label}>
+            <a href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
+              <Icon />
+            </a>
+          </li>
+        ))}
       </ul>
     </SocialDiv>
   );

@@ -1,31 +1,33 @@
 import React from "react";
 import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from "./HeaderElements";
+import { navLinks, personalInfo } from "../../data/portfolioData";
 
 const Header = ({ toggle }) => {
   return (
     <div className="Container">
       <Nav>
         <Logo to="/">
-          <img
-            src="https://i.ibb.co/Mc7537Z/Assets/logo.png"
-            alt="logo"
-          />
+          <span>CB</span>
         </Logo>
         <NavMenu>
-          <NavLink className="menu-item" to="projects" smooth={true}>
-            Projects
-          </NavLink>
-          <NavLink className="menu-item" to="about" smooth={true}>
-            About
-          </NavLink>
-          <NavLink className="menu-item" to="contact" smooth={true}>
-            Contact
-          </NavLink>
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              className="menu-item"
+              to={link.to}
+              smooth={true}
+              spy={true}
+              offset={-80}
+              activeClass="active"
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </NavMenu>
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="http://bit.ly/44w29YS"
+            href={personalInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
