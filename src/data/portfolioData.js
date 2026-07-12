@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "cab9722@gmail.com",
   phone: "+91-8412008868",
   profileImage: "https://avatars.githubusercontent.com/u/78400497?v=4",
-  resumeUrl: "https://tinyurl.com/bdh8ajdy",
+  resumeUrl: "https://tinyurl.com/34e23de4",
   social: {
     linkedin: "https://www.linkedin.com/in/chetan-bhoyar/",
     github: "https://github.com/chetanbhoyar22",
